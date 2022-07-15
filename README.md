@@ -1,4 +1,5 @@
 # DiscordBot
+status = not working
 todo:
 <ul>
 <li>Create command system</li>
