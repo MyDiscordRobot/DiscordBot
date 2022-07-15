@@ -1,7 +1,7 @@
 //import needed libraries
 const Discord = require("discord.js");
 const Database = require("@replit/database");
-import = require { FunctioningCheck } from "./commands/fun/fun.js";
+import FunctioningCheck from "./commands/fun/fun.js";
 //create the client
 const client = new Discord.Client({
   intents: [ 
@@ -23,6 +23,7 @@ const mySecret = process.env['TOKEN'];
 client.on('ready', () => {
   console.log("Bot is ready!");
   client.user.setActivity('for $ commands', { type: 'WATCHING' });
+  console.log(FunctioningCheck);
 });
 
 
