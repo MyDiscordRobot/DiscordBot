@@ -1,29 +1,21 @@
 //import needed libraries
 const Discord = require("discord.js");
 const Database = require("@replit/database");
-import FunctioningCheck from "./commands/fun/fun.js";
+//import FunctioningCheck from "./commands/fun/fun.js";
 //create the client
 const client = new Discord.Client({
-  intents: [ 
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_MEMBERS,
-    Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
-    Intents.FLAGS.GUILD_WEBHOOKS,
-    Intents.FLAGS.GUILD_VOICE_STATES,
-    Intents.FLAGS.GUILD_INVITES,
-    Intents.FLAGS.GUILD_BANS,
-    Intents.FLAGS.GUILD_PRESENCES,
-  ] 
+  intents: ["GUILDS","GUILD_MESSAGES","GUILD_MEMBERS","GUILD_MESSAGE_REACTIONS","GUILD_WEBHOOKS","GUILD_VOICE_STATES","GUILD_INVITES","GUILD_BANS"]
 })
 //token is hidden
 const mySecret = process.env['TOKEN'];
+const mySecret = process.env['prefix']
+const mySecret = process.env['SuperUserID']
 
 //log to console when the client is loaded in
 client.on('ready', () => {
   console.log("Bot is ready!");
   client.user.setActivity('for $ commands', { type: 'WATCHING' });
-  console.log(FunctioningCheck);
+  //.log(FunctioningCheck);
 });
 
 
