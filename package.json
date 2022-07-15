@@ -12,6 +12,7 @@
   "dependencies": {
     "@replit/database": "^2.0.2",
     "discord.js": "^13.8.1",
+    "module": "^1.2.5",
     "node-fetch": "^3.2.6"
   }
 }
