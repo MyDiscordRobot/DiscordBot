@@ -7,9 +7,8 @@ module.exports = (client, message) => {
   const command = args.shift().toLowerCase();
   const cmd = client.commands.get(command);
 
-  if (!cmd){
+if (!cmd){
     message.reply("That command does not exist.");
-  }
-  
+  }  
   cmd.run(client, message, args);
 };
