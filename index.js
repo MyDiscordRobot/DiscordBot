@@ -33,9 +33,5 @@ for (const file of commands) {
   client.commands.set(commandName, command);
 }
 
-client.on("error", (e) => console.error(e));
-client.on("warn", (e) => console.warn(e));
-client.on("debug", (e) => console.info(e));
-
 //login to discord
 client.login(process.env.TOKEN);
