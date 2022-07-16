@@ -1,4 +1,5 @@
 # DiscordBot
+<img src="DiscordBot.png" alt="DiscordBot" width="600" height="600"></img>
 <p>status = working!</p>
 <p>Todo:</p>
 <ul>
@@ -8,7 +9,7 @@
 </ul>
 <h1>Credits</h1> 
 <ul>
-<li><a href=https://github.com/AnIdiotsGuide/discordjs-bot-guide>DiscordJSBotGuide by AnIdiotsGuide</a></li>
-<li><a href=https://github.com/AnIdiotsGuide/guidebot>GuideBot by AnIdiotsGuide</a></li>
+<li><a href="https://github.com/AnIdiotsGuide/discordjs-bot-guide">DiscordJSBotGuide by AnIdiotsGuide</a></li>
+<li><a href="https://github.com/AnIdiotsGuide/guidebot">GuideBot by AnIdiotsGuide</a></li>
 </ul>
 <p>started july 13 2022</p>
