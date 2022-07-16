@@ -33,5 +33,4 @@ for (const file of commands) {
   client.commands.set(commandName, command);
 }
 
-//login to discord
 client.login(process.env.TOKEN);

@@ -1,5 +1,5 @@
 # DiscordBot
-<img src="DiscordBot.png" alt="DiscordBot" width="600" height="600"></img>
+<img src="Discord.jpg" alt="DiscordBot" width="600" height="200"></img>
 <p>status = working!</p>
 <p>Todo:</p>
 <ul>
