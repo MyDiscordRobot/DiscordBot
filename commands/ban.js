@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
 var user = msg.members.mentions.first();
-if (msg.member.hasPermission("BAN_MEMBERS") || message.author.id == config.ownerID) {
+if (msg.member.hasPermission("BAN_MEMBERS") || message.author.id == process.env.SuperUserID) {
     if (msg.members.mentions.first()) {
         try {
             user.ban();
