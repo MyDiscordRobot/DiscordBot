@@ -1,23 +1,41 @@
-//import needed libraries
-const Discord = require("discord.js");
+const { Client, Intents, Collection } = require("discord.js");
 const Database = require("@replit/database");
-//import FunctioningCheck from "./commands/fun/fun.js";
-//create the client
-const client = new Discord.Client({
-  intents: ["GUILDS","GUILD_MESSAGES","GUILD_MEMBERS","GUILD_MESSAGE_REACTIONS","GUILD_WEBHOOKS","GUILD_VOICE_STATES","GUILD_INVITES","GUILD_BANS"]
+const fs = require("fs");
+const client = new Client({
+  intents:
+    ["GUILDS", 
+     "GUILD_MESSAGES",
+     "GUILD_MEMBERS",
+     "GUILD_MESSAGE_REACTIONS",
+     "GUILD_WEBHOOKS",
+     "GUILD_VOICE_STATES",
+     "GUILD_INVITES",
+     "GUILD_BANS"]
 })
-//token is hidden
-const mySecret = process.env['TOKEN'];
-const mySecret = process.env['prefix']
-const mySecret = process.env['SuperUserID']
 
-//log to console when the client is loaded in
-client.on('ready', () => {
-  console.log("Bot is ready!");
-  client.user.setActivity('for $ commands', { type: 'WATCHING' });
-  //.log(FunctioningCheck);
-});
+const config = require("./config.json");
+client.config = config;
+client.commands = new Collection();
 
+const events = fs.readdirSync("./events").filter(file => file.endsWith(".js"));
+for (const file of events) {
+  const eventName = file.split(".")[0];
+  const event = require(`./events/${file}`);
+  client.on(eventName, event.bind(null, client));
+}
+
+const commands = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
+for (const file of commands) {
+  const commandName = file.split(".")[0];
+  const command = require(`./commands/${file}`);
+
+  console.log(`Attempting to load command ${commandName}`);
+  client.commands.set(commandName, command);
+}
+
+client.on("error", (e) => console.error(e));
+client.on("warn", (e) => console.warn(e));
+client.on("debug", (e) => console.info(e));
 
 //login to discord
 client.login(process.env.TOKEN);
