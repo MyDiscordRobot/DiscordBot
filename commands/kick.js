@@ -4,6 +4,7 @@ if (message.member.permissions.has("KICK_MEMBERS") || message.author.id == proce
     if (mention){
         try {
             mention.kick();
+            message.reply("Kicked @" + mention + ".")
         } catch {
             message.reply("I do not have permissions to kick @" + mention + ".");
         }

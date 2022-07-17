@@ -1,5 +1,7 @@
 exports.run = (client, message, args) => {
-  message.channel.reply("Bot latency is ${Date.now() - message.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms");
+let personping = new Date().getTime() - message.createdTimestamp;
+let botping = client.ws.ping;
+message.reply("Your latency is " + personping + "ms. Bot latency is " + botping + "ms.");
 }
 
-exports.name = "ping";
+exports.name = "ping";  

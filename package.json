@@ -10,10 +10,13 @@
   "author": "@yaydy",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/builders": "^0.15.0",
     "@replit/database": "^2.0.2",
+    "@sapphire/time-utilities": "^1.7.5",
+    "colorette": "^2.0.19",
     "discord.js": "^13.8.1",
     "module": "^1.2.5",
-    "node-fetch": "^3.2.6",
+    "node-fetch": "^3.2.8",
     "typescript": "^4.7.4"
   }
 }

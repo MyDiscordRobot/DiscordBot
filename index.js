@@ -1,18 +1,17 @@
-const { Client, Intents, Collection } = require("discord.js");
-const Database = require("@replit/database");
+const { Client, Collection } = require("discord.js");
 const fs = require("fs");
 const client = new Client({
   intents:
-    [
-     "GUILDS", 
-     "GUILD_MESSAGES",
-     "GUILD_MEMBERS",
-     "GUILD_MESSAGE_REACTIONS",
-     "GUILD_WEBHOOKS",
-     "GUILD_VOICE_STATES",
-     "GUILD_INVITES",
-     "GUILD_BANS"
-    ]
+  [
+  "GUILDS", 
+  "GUILD_MESSAGES",
+  "GUILD_MEMBERS",
+  "GUILD_MESSAGE_REACTIONS",
+  "GUILD_WEBHOOKS",
+  "GUILD_VOICE_STATES",
+  "GUILD_INVITES",
+  "GUILD_BANS"
+  ]
 })
 
 const config = require("./config.json");
