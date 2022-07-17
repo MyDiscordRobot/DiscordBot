@@ -1,14 +1,14 @@
 exports.run = (client, message, args) => {
-var user = msg.members.mentions.first();
-if (msg.member.hasPermission("BAN_MEMBERS") || message.author.id == process.env.SuperUserID) {
-    if (msg.members.mentions.first()) {
+let mention = message.mentions.users.first();
+if (message.member.permissions.has("BAN_MEMBERS") || message.author.id == process.env.SuperUserID) {
+    if (mention){
         try {
-            user.ban();
+            mention.ban();
         } catch {
-            msg.reply("I do not have permissions to ban" + msg.members.mentions.first());
+            message.reply("I do not have permissions to ban @" + mention + ".");
         }
     } else {
-        msg.reply("You do not have permissions to ban" + msg.members.mentions.first());
+        message.reply("You do not have permissions to ban @" + mention + ".");
     }
   }
 }
