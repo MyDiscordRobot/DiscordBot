@@ -29,3 +29,12 @@ for (const file of commands){
 }
 
 client.login(process.env.TOKEN);
+const express = require('express')
+const app = express();
+const port = 3000;
+app.get('/', (req, res) => {
+  res.send('Bot is online.')
+})
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
