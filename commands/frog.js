@@ -57,9 +57,7 @@ var frogs = [
 ]
 const { MessageEmbed } = require('discord.js');
 exports.run = async (client, message, args) => {
-  const url = "http://allaboutfrogs.org/funstuff/randomfrog.html/api";
   const randomElement = frogs[Math.floor(Math.random() * frogs.length)];
-
   const embed = new MessageEmbed()
     .setTitle("Frog!")
     .setImage(randomElement)
