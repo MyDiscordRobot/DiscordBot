@@ -11,6 +11,7 @@ exports.run = (client, message, args, level) => {
   • Discord.js :: v${version}
   • Node       :: ${process.version}`); 
   message.reply(stats);
+  message.react("✅");
 };
 
 exports.name = "stats";
