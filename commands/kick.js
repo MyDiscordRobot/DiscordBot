@@ -1,17 +1,18 @@
 exports.run = (client, message, args) => {
-let mention = message.mentions.users.first();
-if (message.member.permissions.has("KICK_MEMBERS") || message.author.id == process.env.SuperUserID) {
-    if (mention){
-        try {
-            mention.kick();
-            message.reply("Kicked @" + mention + ".")
-        } catch {
-            message.reply("I do not have permissions to kick @" + mention + ".");
-        }
-    } else {
-        message.reply("You do not have permissions to kick @" + mention + ".");
-    }
+const member = message.mentions.members.first();
+if (message.member.permissions.has("KICK_MEMBERS") || message.author.id == process.env.SuperUserID){
+if (!member){ 
+  message.reply("You need to @mention a user/bot to kick them from the guild.")
+  message.react("❌");
+  } else {
+  member.voice.setChannel(null);
+  message.reply("Kicked user/bot from guild.");
+  message.react("✅");
+  }
+  } else {
+  message.reply("You do not have permissions to kick.");
+  message.react("❌");
   }
 }
 
-exports.name = "kick";
+exports.name = "ban";

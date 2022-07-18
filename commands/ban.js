@@ -1,17 +1,17 @@
 exports.run = (client, message, args) => {
-let mention = message.mentions.users.first();
+const member = message.mentions.members.first();
 if (message.member.permissions.has("BAN_MEMBERS") || message.author.id == process.env.SuperUserID){
-  if (mention){
-  try{
-  mention.ban();
-  message.reply("Banned @" + mention + ".")
-
-  } catch {
-  message.reply("I do not have permissions to ban @" + mention + ".");
-    }
+if (!member){ 
+  message.reply("You need to @mention a user/bot to kick    from the voice channel.")
+  message.react("❌");
   } else {
-  message.reply("You do not have permissions to ban @" + mention + ".");
-    }
+  member.voice.setChannel(null);
+  message.reply("Banned user/bot from guild.");
+  message.react("✅");
+  }
+  } else {
+  message.reply("You do not have permissions to ban.");
+  message.react("❌");
   }
 }
 
