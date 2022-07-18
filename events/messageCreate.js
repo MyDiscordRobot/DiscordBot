@@ -9,6 +9,7 @@ module.exports = (client, message) => {
 
 if (!cmd){
     message.reply("That command does not exist.");
-  }  
+  }else{  
   cmd.run(client, message, args);
+  }
 };
