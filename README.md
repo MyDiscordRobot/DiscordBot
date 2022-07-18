@@ -1,6 +1,6 @@
 # DiscordBot
 <img src="discord.jpg" alt="DiscordBot" width="600" height="200"></img>
-<h3><strong>WARNING: This project is for fun. I am no JavaScript wizard. The code is going to be messy and unefficent.</strong></h3>
+<h3><strong>WARNING: This project is for fun. The code is going to be messy and unefficent.</strong></h3>
 <p><strong>Status = Working!</strong></p>
 <h1>Features</h1>
 <ul>
