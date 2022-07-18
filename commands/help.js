@@ -8,7 +8,8 @@ const commandlist = codeBlock("asciidoc", `= Commands =
 • Stats: Statistics for the bot.   
 • Working: Tell if bot works.
 • Purge: Purge messages.
-• VCkick: Kick a guild member from voice chat.`);
+• VCkick: Kick a guild member from voice chat.
+• Frog: Send a random frog image.`);
 message.reply(commandlist);
 }
 
