@@ -29,9 +29,7 @@ const commands = fs.readdirSync("./commands").filter(file => file.endsWith(".js"
 for (const file of commands){
   const commandName = file.split(".")[0];
   const command = require(`./commands/${file}`);
-  var commandlist = [];
   console.log(`Attempting to load command ${commandName}`);
-  commandlist.push(commandName);
   client.commands.set(commandName, command);
 }
 
