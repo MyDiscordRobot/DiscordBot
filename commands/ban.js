@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
 let mention = message.mentions.users.first();
-if (message.member.permissions.has("BAN_MEMBERS") || message.author.id == process.env.SuperUserID) {
+if (message.member.permissions.has("BAN_MEMBERS") || message.author.id == process.env.SuperUserID){
   if (mention){
   try{
   mention.ban();
