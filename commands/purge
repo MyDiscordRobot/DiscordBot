@@ -1,6 +1,5 @@
 exports.run = (client, message, args) => {
 const user = message.mentions.users.first();
-
 if (!/^\d+$/.test(message.content.split(" ")[1])) return message.reply('Please provide a valid number');
 
 const amount = !!parseInt(message.content.split(" ")[1]) ? parseInt(message.content.split(" ")[1]) : parseInt(message.content.split(" ")[2])

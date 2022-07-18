@@ -3,7 +3,7 @@ if (message.author.id == process.env.SuperUserID){
   let text = args.join(" ");
   message.delete();
   message.channel.send(text);
-  }else{
+  } else {
   return;
   }
 }
