@@ -1,11 +1,18 @@
 # DiscordBot
-<img src="Discord.jpg" alt="DiscordBot" width="600" height="200"></img>
-<p>status = working!</p>
+<img src="discord.jpg" alt="DiscordBot" width="600" height="200"></img>
+<h3><strong>WARNING: This project is for fun. I get to learn JavaScript more deeply with it. The code is going to be messy and unefficent.</strong></h3>
+<p><strong>Status = Working!</strong></p>
 <p>Todo:</p>
 <ul>
-<li> ̶i̶m̶p̶l̶e̶m̶e̶n̶t̶ ̶c̶o̶m̶m̶a̶n̶d̶ ̶s̶y̶s̶t̶e̶m̶</li>
-<li>implement commands</li>
-<li>make sure bot works</li>
+<li>Logging system</li>
+<li>Implement more commands</li>
+<li>Clean up code</li>
+</ul>
+<h1>Features</h1>
+<ul>
+<li>Basic commands</li>
+<li>Command system</li>
+<li>Framework backend</li>
 </ul>
 <h1>Credits</h1> 
 <ul>
