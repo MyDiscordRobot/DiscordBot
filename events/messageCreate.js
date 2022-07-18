@@ -8,7 +8,6 @@ module.exports = (client, message) => {
   setTimeout(() => {
   talkedRecently.delete(message.author.id);
   }, 2000);
-  console.log(process.env.prefix)
   const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   const cmd = client.commands.get(command);
