@@ -9,7 +9,6 @@ const commandlist = codeBlock("asciidoc", `= Commands =
 • Working: Tell if bot works.
 • Purge: Purge messages.
 • VCkick: Kick a guild member from voice chat.`);
-
 message.reply(commandlist);
 }
 

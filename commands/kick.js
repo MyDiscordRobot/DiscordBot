@@ -15,4 +15,4 @@ if (!member){
   }
 }
 
-exports.name = "ban";
+exports.name = "kick";

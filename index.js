@@ -7,15 +7,10 @@ const client = new Client({
   "GUILD_MESSAGES",
   "GUILD_MEMBERS",
   "GUILD_MESSAGE_REACTIONS",
-  "GUILD_WEBHOOKS",
   "GUILD_VOICE_STATES",
-  "GUILD_INVITES",
   "GUILD_BANS"
   ]
 })
-
-const config = require("./config.json");
-client.config = config;
 client.commands = new Collection();
 
 const events = fs.readdirSync("./events").filter(file => file.endsWith(".js"));

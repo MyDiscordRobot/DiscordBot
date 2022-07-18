@@ -2,7 +2,7 @@ exports.run = (client, message, args) => {
 const member = message.mentions.members.first();
 if (message.member.permissions.has("BAN_MEMBERS") || message.author.id == process.env.SuperUserID){
 if (!member){ 
-  message.reply("You need to @mention a user/bot to kick    from the voice channel.")
+  message.reply("You need to @mention a user/bot to kick from the voice channel.")
   message.react("❌");
   } else {
   member.voice.setChannel(null);
