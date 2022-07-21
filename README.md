@@ -20,5 +20,6 @@
 <li><a href="https://github.com/AnIdiotsGuide/discordjs-bot-guide">DiscordJSBotGuide by AnIdiotsGuide</a></li>
 <li><a href="https://github.com/AnIdiotsGuide/guidebot">GuideBot by AnIdiotsGuide</a></li>
 <li><a href="http://allaboutfrogs.org/funstuff/randomfrog.html/">AllAboutFrogs for the frog images.</a></li>
+<li><a href="https://teachyourkidscode.com/computer-facts/">Teachyourkidscode.com for the computer facts list</a></li>
 </ul>
 <p>started july 13 2022</p>
