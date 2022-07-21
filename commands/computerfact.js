@@ -50,7 +50,12 @@ var facts = [
   "The Internet was created in the 1960s with the primary aim of sharing resources.",
   "Before they could progress as staple brands, Microsoft, HP, and Apple began manufacturing computers in their garages.",
   "Sony unlawfully implanted rootkits on 22 million computers in 2005 to prevent users from stealing copyrighted music, which was difficult to eradicate.",
-  "With over 746 million active users, China boasts the world’s largest internet population."
+  "With over 746 million active users, China boasts the world’s largest internet population.",
+  "Statista revealed that in 2021, there are already 15 billion mobile devices that people actively use.",
+  "The worldwide retail Artificial Intelligence industry is expected to reach $110 billion by 2024, according to International Data Corporation (IDC).",
+  "The overall global storage is projected to reach 175 zettabytes by the end of 2025.",
+  "Deep Blue, an IBM supercomputer 1997, defeated the world-renowned chess master Garry Kasparov through a critical move that came from an unexpected bug in the software.",
+  "A single computer program detects over half of all Wikipedia vandalism with more than 90% precision."
 ]
 exports.run = async (client, message, args) => {
   const randomElement = facts[Math.floor(Math.random() * facts.length)];
