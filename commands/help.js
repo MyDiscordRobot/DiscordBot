@@ -10,7 +10,8 @@ const commandlist = codeBlock("asciidoc", `= Commands =
 • Purge: Purge messages.
 • VCkick: Kick a guild member from voice chat.
 • Frog: Send a random frog image.
-• ComputerFact: Send a random computer fact.`);
+• ComputerFact: Send a random computer fact.
+• Cat: Send a random cat image.`);
 message.reply(commandlist);
 }
 
