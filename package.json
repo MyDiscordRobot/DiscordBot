@@ -16,6 +16,7 @@
     "discord.js": "^13.8.1",
     "express": "^4.18.1",
     "module": "^1.2.5",
-    "node-fetch": "^3.2.8"
+    "node-fetch": "^3.2.8",
+    "random-cat-img": "^1.0.3"
   }
 }

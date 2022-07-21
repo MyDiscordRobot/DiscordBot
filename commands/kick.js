@@ -5,7 +5,7 @@ if (!member){
   message.reply("You need to @mention a user/bot to kick them from the guild.")
   message.react("❌");
   } else {
-  member.voice.setChannel(null);
+  member.kick();
   message.reply("Kicked user/bot from guild.");
   message.react("✅");
   }
