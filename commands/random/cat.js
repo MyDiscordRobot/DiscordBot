@@ -1,11 +1,15 @@
-const randomCat = require('random-cat-img');
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed } = require("discord.js");
+const fetch = require("node-fetch");
+
 exports.run = async (client, message, args) => {
-  const res = await randomCat();
-  const embed = new MessageEmbed()
-    .setTitle("Cat!")
-    .setImage(res.data.message)
-await message.reply({ embeds: [embed] }) && message.react("✅");
+const url = await fetch("https://www.reddit.com/r/cat/random/.json?include_over_18=off");
+const random = await url.json();
+
+const embed = new MessageEmbed()
+  .setTitle("Cat!")
+  .setImage(random[0].data.children[0].data.url)
+
+await message.channel.send({ embeds: [embed] });
 }
 
 exports.name = "cat";
