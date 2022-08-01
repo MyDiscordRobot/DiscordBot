@@ -6,14 +6,14 @@ module.exports = (client, message) => {
   if (talkedRecently.has(message.author.id)) return message.reply("Don't spam commands!");
   talkedRecently.add(message.author.id);
   setTimeout(() => {
-  talkedRecently.delete(message.author.id);
+    talkedRecently.delete(message.author.id);
   }, 2000);
   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   const cmd = client.commands.get(command);
-if (!cmd){
+  if (!cmd) {
     message.reply("That command does not exist. Use $help for a list of existing commands.");
-  } else {  
-  cmd.run(client, message, args);
+  } else {
+    cmd.run(client, message, args);
   }
 };
