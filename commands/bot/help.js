@@ -1,6 +1,8 @@
 const { codeBlock } = require("@discordjs/builders");
 exports.run = (client, message, args) => {
 const commandlist = codeBlock("asciidoc", `= Commands =
+My website is https://yaydy.github.io/DiscordBot/
+
 = MODERATION =
 • Ban: Ban a guild member.         
 • Kick: Kick a guild member.     
