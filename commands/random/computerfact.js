@@ -1,3 +1,4 @@
+const logger = require("../../modules/logger.js");
 var facts = [
   "The Fugaku supercomputer is the world’s fastest computer",
   "Google uses 1,000 computers in 0.2 seconds",
@@ -60,6 +61,7 @@ var facts = [
 exports.run = async (client, message, args) => {
   const randomElement = facts[Math.floor(Math.random() * facts.length)];
   await message.reply(randomElement) && message.react("✅");
+  logger.log(`${message.author.tag}'s got sent a computer fact (${randomElement})! `, "cmd");
 }
 
 exports.name = "computerfact";
