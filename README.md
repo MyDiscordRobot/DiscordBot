@@ -7,10 +7,10 @@
 <li>Basic commands</li>
 <li>Command system</li>
 <li>Framework backend</li>
+<li>Logging system</li>
 </ul>
 <h1>Todo</h1>
 <ul>
-<li>Logging system</li>
 <li>Implement more commands</li>
 <li>Clean up code</li>
 </ul>
