@@ -1,4 +1,4 @@
-const logger = require("../../modules/logger.js");
+import { log } from "../../modules/logger.js";
 var facts = [
   "The Fugaku supercomputer is the world’s fastest computer",
   "Google uses 1,000 computers in 0.2 seconds",
@@ -58,10 +58,10 @@ var facts = [
   "Deep Blue, an IBM supercomputer 1997, defeated the world-renowned chess master Garry Kasparov through a critical move that came from an unexpected bug in the software.",
   "A single computer program detects over half of all Wikipedia vandalism with more than 90% precision."
 ]
-exports.run = async (client, message, args) => {
+export async function run(client, message, args) {
   const randomElement = facts[Math.floor(Math.random() * facts.length)];
   await message.reply(randomElement) && message.react("✅");
-  logger.log(`${message.author.tag}'s got sent a computer fact (${randomElement})! `, "cmd");
+  log(`${message.author.tag}'s got sent a computer fact (${randomElement})! `, "cmd");
 }
 
-exports.name = "computerfact";
+export const name = "computerfact";

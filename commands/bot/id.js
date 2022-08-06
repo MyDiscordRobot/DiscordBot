@@ -1,4 +1,4 @@
-exports.run = (client, messages, args) => {
+export function run(client, message, args) {
     const member = message.mentions.members.first();
     if (!member) {
         message.reply("You need to @mention a user/bot to get their id.")
@@ -9,4 +9,4 @@ exports.run = (client, messages, args) => {
 }
 }
 
-exports.name = "id";
+export const name = "id";

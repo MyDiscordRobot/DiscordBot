@@ -1,8 +1,8 @@
-const logger = require("../../modules/logger.js");
-exports.run = (client, message, args) => {
+import { log } from "../../modules/logger.js";
+export function run(client, message, args) {
   message.reply('Bot is functioning.');
   message.react('✅');
-  logger.log(`${message.author.tag}'s working command was answered! `, "cmd");
+  log(`${message.author.tag}'s working command was answered! `, "cmd");
 }
 
-exports.name = "working";
+export const name = "working";

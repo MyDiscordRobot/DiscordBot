@@ -1,10 +1,10 @@
-const logger = require("../../modules/logger.js");
-const { codeBlock } = require("@discordjs/builders");
+import logger from "../../modules/logger.js";
+import { codeBlock } from "@discordjs/builders";
 const membercount = message.guild.memberCount;
-exports.run = (client, message, args) => {
+export function run(client, message, args) {
 const stats = codeBlock("asciidoc", `= SERVER STATISTICS =
 Users in server = ${membercount}
                                                     `)
 }
 
-exports.name = ("serverstats");
+export const name = ("serverstats");
