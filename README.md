@@ -1,6 +1,5 @@
 # DiscordBot
-<h3><strong>WARNING: This project is for fun. The code is going to be messy and unefficent.</strong></h3>
-<h3><strong>WARNING: There are many bugs. I will fix them later.</strong></h3>
+[![CodeFactor](https://www.codefactor.io/repository/github/mydiscordrobot/discordbot/badge)](https://www.codefactor.io/repository/github/mydiscordrobot/discordbot)
 <p><strong>Status = Working!</strong></p>
 <h1>Features</h1>
 <ul>
