@@ -1,6 +1,5 @@
 # DiscordBot
-[![CodeFactor](https://www.codefactor.io/repository/github/mydiscordrobot/discordbot/badge)](https://www.codefactor.io/repository/github/mydiscordrobot/discordbot)
-<p><strong>Status = Working!</strong></p>
+<a href="https://www.codefactor.io/repository/github/mydiscordrobot/discordbot"><img src="https://www.codefactor.io/repository/github/mydiscordrobot/discordbot/badge" alt="CodeFactor" /></a><p><strong>Status = Working!</strong></p>
 <h1>Features</h1>
 <ul>
 <li>Basic commands</li>
