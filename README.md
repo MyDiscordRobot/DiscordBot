@@ -10,6 +10,7 @@
 <h1>Todo</h1>
 <ul>
 <li>Implement more commands</li>
+ <li>Make code more consistent</li>
 </ul>
 <h1>Credits</h1> 
 <ul>
