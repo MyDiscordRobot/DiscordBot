@@ -1,5 +1,5 @@
 const logger = require("../../modules/logger.js");
-exports.run = (client, message, args) => {
+exports.run = (client, message) => {
   let personping = new Date().getTime() - message.createdTimestamp;
   let botping = client.ws.ping;
   message.reply("Your latency is " + personping + "ms. Bot latency is " + botping + "ms.");

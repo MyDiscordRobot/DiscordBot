@@ -1,6 +1,6 @@
 const { codeBlock } = require("@discordjs/builders");
 const logger = require("../../modules/logger.js");
-exports.run = (client, message, args) => {
+exports.run = (client, message) => {
   const commandlist = codeBlock("asciidoc", `= Commands =
 My website is https://yaydy.github.io/DiscordBot/
 

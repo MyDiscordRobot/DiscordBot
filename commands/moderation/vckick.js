@@ -1,5 +1,5 @@
 const logger = require("../../modules/logger.js");
-exports.run = (client, message, args) => {
+exports.run = (client, message) => {
   const member = message.mentions.members.first();
   if (message.member.permissions.has("MOVE_MEMBERS") || message.author.id == process.env.SuperUserID) {
     if (!member) {
