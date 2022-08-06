@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+exports.run = (client, message) => {
   if(message.author.id == process.env.SuperUserID){
     console.log("Process was killed by owner.");
     process.exit(0);
