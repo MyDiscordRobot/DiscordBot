@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
     .setImage(random[0].data.children[0].data.url)
 
   await message.channel.send({ embeds: [embed] });
-  logger.log(`${message.author.tag}'s got sent a cat picture (${random[0].data.children[0].data.url})! `, "cmd");
+  logger.log(`${message.author.tag}'s got sent a cat picture! `, "cmd");
 }
 
 exports.name = "cat";

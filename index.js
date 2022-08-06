@@ -13,14 +13,12 @@ const client = new Client({
 })
 const logger = require("./modules/logger.js");
 client.commands = new Collection();
-//events system
 const events = fs.readdirSync("./events").filter(file => file.endsWith(".js"));
 for (const file of events) {
   const eventName = file.split(".")[0];
   const event = require(`./events/${file}`);
   client.on(eventName, event.bind(null, client));
 }
-//command system
 const commandsBot = fs.readdirSync("./commands/bot").filter(file => file.endsWith(".js"));
 for (const file of commandsBot) {
   const commandName = file.split(".")[0];
