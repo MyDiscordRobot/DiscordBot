@@ -1,4 +1,4 @@
-exports.run = (client, messages, args) => {
+exports.run = (client, message, args) => {
     const member = message.mentions.members.first();
     if (!member) {
         message.reply("You need to @mention a user/bot to get their id.")
