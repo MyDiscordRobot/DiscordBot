@@ -1,4 +1,4 @@
-export function run(client, message, args) {
+exports.run = (client, message, args) => {
   if(message.author.id == process.env.SuperUserID){
     console.log("Process was killed by owner.");
     process.exit(0);
@@ -7,4 +7,4 @@ export function run(client, message, args) {
   }
 }
 
-export const name = "crash";
+exports.name = "crash";

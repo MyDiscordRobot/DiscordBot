@@ -1,6 +1,6 @@
 const talkedRecently = new Set();
 
-export default (client, message) => {
+module.exports = (client, message) => {
   if (message.author.bot) return;
   if (message.content.indexOf(process.env.prefix) !== 0) return;
   if (talkedRecently.has(message.author.id)) return message.reply("Don't spam commands!");

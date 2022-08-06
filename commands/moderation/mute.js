@@ -1,5 +1,5 @@
-import logger from "../../modules/logger.js";
-export async function run(client, message, args) {
+const logger = require("../../modules/logger.js");
+exports.run = async (client, message, args) => {
 if(message.member.hasPermission('ADMINISTRATOR') || message.member.hasPermission('MANAGE_GUILD') || message.member.hasPermission('MANAGE_MESSAGES') || message.member.hasPermission('MANAGE_CHANNELS') || (message.author.id == process.env.OwnerID)) {
     const mentionMember = message.mentions.members.first();
     if(!mentionMember) return message.reply('Please mention a valid member of this server') 

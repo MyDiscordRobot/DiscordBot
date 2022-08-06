@@ -1,7 +1,7 @@
-import { cyan, red, magenta, gray, yellow, white, green } from "colorette";
-import { Timestamp } from "@sapphire/time-utilities";
+const { cyan, red, magenta, gray, yellow, white, green } = require("colorette");
+const { Timestamp } = require("@sapphire/time-utilities");
 
-export function log(content, type = "log") {
+exports.log = (content, type = "log") => {
   const timestamp = `[${cyan(new Timestamp("YYYY-MM-DD HH:mm:ss"))}]:`;
 
   switch (type) {
@@ -13,12 +13,12 @@ export function log(content, type = "log") {
     case "ready": return console.log(`${timestamp} ${green(type.toUpperCase())} ${content}`);
     default: throw new TypeError("Logger type must be either warn, debug, log, ready, cmd or error.");
   }
-}
+};
 
-export function error(...args) { return this.log(...args, "error"); }
+exports.error = (...args) => this.log(...args, "error");
 
-export function warn(...args) { return this.log(...args, "warn"); }
+exports.warn = (...args) => this.log(...args, "warn");
 
-export function debug(...args) { return this.log(...args, "debug"); }
+exports.debug = (...args) => this.log(...args, "debug");
 
-export function cmd(...args) { return this.log(...args, "cmd"); }
+exports.cmd = (...args) => this.log(...args, "cmd");

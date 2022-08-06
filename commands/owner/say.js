@@ -1,4 +1,4 @@
-export function run(client, message, args) {
+exports.run = (client, message, args) => {
   if (message.author.id == process.env.SuperUserID) {
     let text = args.join(" ");
     message.delete();
@@ -8,4 +8,4 @@ export function run(client, message, args) {
   }
 }
 
-export const name = "say";
+exports.name = "say";

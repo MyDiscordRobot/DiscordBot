@@ -1,8 +1,8 @@
-import { log } from "../../modules/logger.js";
-import { MessageEmbed } from "discord.js";
-import fetch from "node-fetch";
+const logger = require("../../modules/logger.js");
+const { MessageEmbed } = require("discord.js");
+const fetch = require("node-fetch");
 
-export async function run(client, message, args) {
+exports.run = async (client, message, args) => {
   const url = await fetch("https://www.reddit.com/r/CatPics/random/.json?include_over_18=off");
   const random = await url.json();
 
@@ -11,7 +11,7 @@ export async function run(client, message, args) {
     .setImage(random[0].data.children[0].data.url)
 
   await message.channel.send({ embeds: [embed] });
-  log(`${message.author.tag}'s got sent a cat picture! `, "cmd");
+  logger.log(`${message.author.tag}'s got sent a cat picture! `, "cmd");
 }
 
-export const name = "cat";
+exports.name = "cat";
