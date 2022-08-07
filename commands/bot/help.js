@@ -1,7 +1,7 @@
 const { codeBlock } = require("@discordjs/builders");
 const logger = require("../../modules/logger.js");
 exports.run = (client, message) => {
-  const commandlist = codeBlock("asciidoc", `= Commands =
+const commandlist = codeBlock("asciidoc", `= Commands =
 My website is https://yaydy.github.io/DiscordBot/
 
 = MODERATION =
@@ -21,8 +21,12 @@ My website is https://yaydy.github.io/DiscordBot/
 • Cat: Send a random cat image.
 • Dog: Send a random dog image.
 • Meme: Send a random meme image.`);
+try{
   message.reply(commandlist);
   logger.log(`${message.author.tag}'s help command was answered!`, "cmd");
+} catch (err) {
+  logger.log(err, "error")
 }
+};
 
 exports.name = "help";

@@ -5,6 +5,6 @@ exports.run = (client, message, args) => {
 const stats = codeBlock("asciidoc", `= SERVER STATISTICS =
 Users in server = ${membercount}
                                                     `)
-}
+};
 
 exports.name = ("serverstats");

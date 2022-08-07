@@ -11,9 +11,12 @@ exports.run = (client, message) => {
   • Uptime     :: ${duration}
   • Discord.js :: v${version}
   • Node       :: ${process.version}`);
+  try{
   message.reply(stats);
-  message.react("✅");
   logger.log(`${message.author.tag}'s stats command was answered! `, "cmd");
+  } catch (err) {
+    logger.log(err, "error")
+  }
 };
 
 exports.name = "stats";

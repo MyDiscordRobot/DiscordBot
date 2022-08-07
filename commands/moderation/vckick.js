@@ -7,16 +7,20 @@ exports.run = (client, message) => {
       message.react("❌");
       logger.log(`${message.author.tag}'s vckick command failed because he didn't mention anyone! `, "cmd");
     } else {
+      try{
       user.setVoiceChannel(null);
       message.reply("Kicked user/bot from voice channel.");
       message.react("✅");
       logger.log(`${message.author.tag} vckicked ${member}! `, "cmd");
+      } catch (err){
+        logger.log(err, "error")
+      }
     }
   } else {
     message.reply("You do not have permissions to vckick.");
     message.react("❌");
     logger.log(`${message.author.tag}'s failed the permission to vckick ${member}! `, "cmd");
   }
-}
+};
 
 exports.name = "vckick";

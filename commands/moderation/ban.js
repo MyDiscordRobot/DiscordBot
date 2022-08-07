@@ -7,16 +7,20 @@ exports.run = (client, message) => {
       message.react("❌");
       logger.log(`${message.author.tag}'s ban command failed because he didn't mention anyone! `, "cmd");
     } else {
+      try{
       member.ban();
       message.reply("Banned user/bot from guild.");
       message.react("✅");
       logger.log(`${message.author.tag}'s banned ${member}! `, "cmd");
+      } catch (err) {
+        logger.log(err, "error");
+      }
     }
   } else {
     message.reply("You do not have permissions to ban.");
     message.react("❌");
     logger.log(`${message.author.tag}'s failed the permission to ban ${member}! `, "cmd");
   }
-}
+};
 
 exports.name = "ban";
