@@ -19,31 +19,10 @@ for (const file of events) {
   const event = require(`./events/${file}`);
   client.on(eventName, event.bind(null, client));
 }
-const commandsBot = fs.readdirSync("./commands/bot").filter(file => file.endsWith(".js"));
-for (const file of commandsBot) {
+const commands = fs.readdirSync("./commands/bot" && "./commands/moderation" && "./commands/owner" && "./commands/random").filter(file => file.endsWith(".js"));
+for (const file of commands) {
   const commandName = file.split(".")[0];
-  const command = require(`./commands/bot/${file}`);
-  logger.log(`Attempting to load command ${commandName}`, "log");
-  client.commands.set(commandName, command);
-}
-const commandsModeration = fs.readdirSync("./commands/moderation").filter(file => file.endsWith(".js"));
-for (const file of commandsModeration) {
-  const commandName = file.split(".")[0];
-  const command = require(`./commands/moderation/${file}`);
-  logger.log(`Attempting to load command ${commandName}`, "log");
-  client.commands.set(commandName, command);
-}
-const commandsOwner = fs.readdirSync("./commands/owner").filter(file => file.endsWith(".js"));
-for (const file of commandsOwner) {
-  const commandName = file.split(".")[0];
-  const command = require(`./commands/owner/${file}`);
-  logger.log(`Attempting to load command ${commandName}`, "log");
-  client.commands.set(commandName, command);
-}
-const commandsRandom = fs.readdirSync("./commands/random").filter(file => file.endsWith(".js"));
-for (const file of commandsRandom) {
-  const commandName = file.split(".")[0];
-  const command = require(`./commands/random/${file}`);
+  const command = require(`./commands/bot/${file}` && `./commands/moderation/${file}` && `./commands/owner/${file}` && `./commands/random/${file}`);
   logger.log(`Attempting to load command ${commandName}`, "log");
   client.commands.set(commandName, command);
 }
