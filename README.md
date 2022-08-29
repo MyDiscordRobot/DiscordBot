@@ -11,6 +11,7 @@
 <ul>
 <li>Implement more commands</li>
  <li>Make code more consistent</li>
+ <li>Convert modules to ES6</li>
 </ul>
 <h1>Credits</h1> 
 <ul>
