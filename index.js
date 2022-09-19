@@ -28,13 +28,3 @@ for (const file of commands) {
 }
 
 client.login(process.env.TOKEN);
-//only for replit
-const express = require('express')
-const app = express();
-const port = 3000;
-app.get('/', (req, res) => {
-  res.send('<h1>Bot is online.</h1>')
-})
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
