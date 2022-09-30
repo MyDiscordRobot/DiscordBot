@@ -7,5 +7,4 @@ fetch('https://words.bighugelabs.com/api/2/${api}/${word}/json')
   .then(data => {
     console.log(data)
   })
-  .catch(err => ...)
 }
