@@ -15,7 +15,6 @@
 </ul>
 <h1>Credits</h1> 
 <ul>
-<li><a href="https://github.com/AnIdiotsGuide/discordjs-bot-guide">DiscordJSBotGuide by AnIdiotsGuide</a></li>
 <li><a href="https://github.com/AnIdiotsGuide/guidebot">GuideBot by AnIdiotsGuide</a></li>
 <li><a href="https://teachyourkidscode.com/computer-facts/">Teachyourkidscode.com for the computer facts list</a></li>
 </ul>
