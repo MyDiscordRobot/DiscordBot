@@ -1,0 +1,9 @@
+/* exports.run = (client, args, message) => {
+  message.channel.fetchMessages({ limit: 100 }).then(message => { 
+  const arrayadd = messages.filter(del => del.content.includes(check)));
+  }
+    for (var i = 0; i<Array.from(arrayadd.keys()).length; i++){ 
+  msg.channel.fetchMessage(Array.from(arrayadd.keys())[i]).then(deldel => deldel.reply("Cheese here :smile:."));
+ }
+}
+exports.name = "cheese"; */

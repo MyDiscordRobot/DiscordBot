@@ -1,5 +1,5 @@
 const logger = require("../../modules/logger.js");
-exports.run = (client, message) => {
+exports.run = (message) => {
   try{
   message.reply('Bot is functioning.');
   message.react('✅');

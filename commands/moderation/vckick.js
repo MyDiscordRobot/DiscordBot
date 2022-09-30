@@ -1,26 +1,15 @@
 const logger = require("../../modules/logger.js");
 exports.run = (client, message) => {
   const member = message.mentions.members.first();
-  if (message.member.permissions.has("MOVE_MEMBERS") || message.author.id == process.env.SuperUserID) {
-    if (!member) {
-      message.reply("You need to @mention a user/bot to kick from the voice channel.")
-      message.react("❌");
-      logger.log(`${message.author.tag}'s vckick command failed because he didn't mention anyone! `, "cmd");
-    } else {
-      try{
-      user.setVoiceChannel(null);
-      message.reply("Kicked user/bot from voice channel.");
-      message.react("✅");
-      logger.log(`${message.author.tag} vckicked ${member}! `, "cmd");
-      } catch (err){
-        logger.log(err, "error")
+  if (!message.member.permissions.has("KICK_MEMBERS") || message.author.id == process.env.SuperUserID) return message.reply("You do not have permissions to vckick.");
+if (!member) return message.reply("You need to @mention a user/bot to vckick.");
+try{
+  user.setVoiceChannel(null);
+  message.reply("Kicked user/bot from vc.");
+      logger.log(`${message.author.tag}'s vckicked ${member}! `, "cmd");
+      } catch (err) {
+        logger.log(err, "error");
       }
-    }
-  } else {
-    message.reply("You do not have permissions to vckick.");
-    message.react("❌");
-    logger.log(`${message.author.tag}'s failed the permission to vckick ${member}! `, "cmd");
-  }
 };
 
-exports.name = "vckick";
+exports.name = "ban";
