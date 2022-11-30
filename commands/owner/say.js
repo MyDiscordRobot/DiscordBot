@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
     message.delete();
     message.channel.send(text);
   } else {
-    return;
+    message.reply("That command does not exist. Use $help for a list of existing commands.");
   }
 }
 

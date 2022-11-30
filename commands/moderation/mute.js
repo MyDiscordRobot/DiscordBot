@@ -2,7 +2,7 @@ const logger = require("../../modules/logger.js");
 exports.run = async (client, message, args) => {
 if(message.member.hasPermission('ADMINISTRATOR') || message.member.hasPermission('MANAGE_GUILD') || message.member.hasPermission('MANAGE_MESSAGES') || message.member.hasPermission('MANAGE_CHANNELS') || (message.author.id == process.env.OwnerID)) {
     const mentionMember = message.mentions.members.first();
-    if(!mentionMember) return message.reply('Please mention a valid member of this server') 
+    if(!mentionMember) return message.reply('Please mention a valid member of this server');
     if(mentionMember.hasPermission('MANAGE_MESSAGES')) return message.reply('I cannot mute this user!');
     let muteRole = message.guild.roles.cache.find(role => role.name === 'Muted');
     if(!muteRole) {
@@ -24,11 +24,10 @@ if(message.member.hasPermission('ADMINISTRATOR') || message.member.hasPermission
       }
       catch (err) {
         message.reply(`Sorry, I couldn't mute because of: ${err}`);
-        message.react("");
       }
     }
     await (mentionMember.roles.add(muteRole.id));
-    message.reply(`${mentionMember.displayName} has been muted!!🔇`);
+    message.reply(`${mentionMember.displayName} has been muted!!`);
   }
   else {
     message.reply('You don\'t have permissions to do that!');

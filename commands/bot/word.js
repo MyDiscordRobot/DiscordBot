@@ -1,10 +1,10 @@
-exports.run = (client, message, args) => {
 const fetch = require('node-fetch');
-if(!args) return message.reply("You need to put a word!");
+exports.run = (client, message, args) => {
 const word = args;
-fetch('https://words.bighugelabs.com/api/2/${api}/${word}/json')
+if(!args) return message.reply("You need to put a word!");
+fetch('https://words.bighugelabs.com/api/2/' + process.env.api +'/' + word + '/json')
   .then(response => response.json())
   .then(data => {
-    console.log(data)
+    console.log(data);
   })
 }

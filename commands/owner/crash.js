@@ -5,12 +5,11 @@ exports.run = (message) => {
     message.react("🏠");
     message.react("🚗");
     console.log("Process was killed by owner.");
-
     } catch (err) {
       logger.log(err, "error")
     }
   } else {
-    message.reply("You cannot do this!");
+    message.reply("That command does not exist. Use $help for a list of existing commands.");
   }
 }
 
